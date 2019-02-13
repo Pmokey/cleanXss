@@ -119,7 +119,7 @@ public class XssFilter implements Filter {
      * @date 2019年2月13日
      */
     private void errorResponse(HttpServletResponse response, String paramNm) throws IOException {
-        String warning = "输入项中不能包含非法字符。";
+        String warning = "参数包含非法字符";
         response.setContentType("text/html; charset=UTF-8");
         PrintWriter out = response.getWriter();
         out.println("{\"msg\":\"" + warning + "\", \"fieldName\": \"" + paramNm + "\"}");
